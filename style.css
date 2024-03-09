@@ -1,0 +1,207 @@
+:root {
+
+    /** Primary color */
+
+    --very-dark-blue-primary: hsl(233, 47%, 7%);
+    --dark-desaturated-blue-primary: hsl(244, 38%, 16%);
+    --soft-violet-primary: hsl(277, 64%, 61%);
+
+    /** Neutral color */
+
+    --white-neutral: hsl(0, 0%, 100%);
+    --slightly-transparent-whitepara-neutral: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-whiteheading-neutral: hsla(0, 0%, 100%, 0.6);
+
+}
+
+/*! Fonts to use */
+
+/* ?  font-family: "Lexend Deca", sans-serif; */
+/* ? font-family: "Inter", sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 110vw;
+    background-color: var(--very-dark-blue-primary);
+}
+
+main {
+    display: flex;
+    max-width: 1110px;
+    width: 90%;
+    height: 446px;
+    max-height: 100%;
+    border-radius: 10px;
+    background-color: var(--dark-desaturated-blue-primary);
+}
+
+.text {
+    color: var(--slightly-transparent-whitepara-neutral);
+    display: flex;
+    flex-shrink: 5;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 571px;
+    padding-left: clamp(10px, 5vw, 70px);
+    padding-right: clamp(10px, 7vw, 120px);
+    padding-top: clamp(15px, 5vw, 30px);
+}
+
+.main-title h1 {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.7rem, 0.587vw + 1.583rem, 2.28rem);
+    /**----2.28rem-----*/
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.main-title h1 b {
+    color: var(--soft-violet-primary);
+    font-weight: 600;
+}
+
+.text-info article p {
+    line-height: 1.6;
+    color: var(--slightly-transparent-whitepara-neutral);
+    font-size: 0.93rem;
+    padding-bottom: 50px;
+    font-family: "Inter", sans-serif;
+}
+
+.information {
+    padding-bottom: 30px;
+    padding-right: 25px;
+    line-height: 1.5;
+}
+
+.information ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.information ul li {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 0.7rem;
+    font-family: "Inter", sans-serif;
+}
+
+.information ul li b {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+figure {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--soft-violet-primary);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0 10px 10px 0;
+    object-fit: contain;
+    opacity: 0.5;
+}
+
+/*!---- Media sizes ----*/
+
+@media (max-width: 650px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-inline: 25px;
+    }
+
+    .main-title h1 {
+        padding-bottom: 20px;
+    }
+
+    figure,
+    img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .information {
+        padding-right: 0;
+    }
+
+}
+
+@media (max-width: 375px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-inline: 25px;
+    }
+
+    .main-title h1 {
+        padding-bottom: 20px;
+    }
+
+    figure,
+    img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .information ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+
+
+
+/** Footer place */
+.attribution {
+    font-size: 0.687rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
