@@ -158,6 +158,10 @@ img {
 }
 
 @media (max-width: 375px) {
+    body {
+        height: 140vh;
+    }
+    
     main {
         display: flex;
         flex-direction: column-reverse;
